@@ -19,7 +19,7 @@ input, select { vertical-align:middle; }
 
 /* app styles */
 body { font-style:italic; font-family:Arial, Helvetica, sans-serif; background-color:#ffffff; color:#000000; }
-header { box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.5); position:fixed; top:0; left:0; z-index:5; width:100%; background:#ffffff; color:#2b3244; }
+header { box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.5); position:fixed; top:0; left:0; z-index:5; width:100%; background-color:rgba(255, 255, 255, 0.965); color:#2b3244; }
 /* h1 and .back share font-size and padding */
 h1 { margin:0 auto; padding:0.4em 0; width:6.5em; font-size:2em; background-repeat:no-repeat; background-position:right center; }
 .back { position:fixed; top:0; left:0; z-index:9; background:#bfbfbf; color:#ffffff; padding:0.4em 0.25em 0.4em 0.1em; font-size:2em; cursor:pointer; }
@@ -35,7 +35,7 @@ li,
 .home #featuredseriestitle { margin-top:1em; }
 video { width:100%; height:100%; }
 small { font-size:1em; color:#bfbfbf; }
-.box { box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.5), 0px 1.5px 1px 0px rgba(0, 0, 0, 0.5); border-radius:5px 5px 5px 5px; padding:1em; text-align:center; background-color:rgba(9, 91, 147, 0.85); color:#ffffff; }
+.box { box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.5), 0px 1.5px 1px 0px rgba(0, 0, 0, 0.5); border-radius:5px 5px 5px 5px; padding:1em; text-align:center; background-color:rgba(9, 91, 147, 0.95); color:#ffffff; }
 .box a { display:block; width:100%; padding:1em 0; }
 .box #nextinternetbroadcast a { padding:0; }
 .link { box-shadow: inset 0px 1.5px 1px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 54, 93, 0.5); border-radius:5px 5px 5px 5px; margin:1em 0; width:-webkit-calc(100% - 4px); width:calc(100% - 4px); background:#00aaf2; }
