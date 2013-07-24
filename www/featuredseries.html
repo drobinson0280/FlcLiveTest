@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- makes mobile browsers not zoom by default, not good unless media queries are used for phones -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Featured Series | FLC Live</title>
+<link rel="stylesheet" href="flclive.css">
+<!-- required for the redirectToSystemBrowser() function -->
+<script src="phonegap.js"></script>
+<!-- used to change the formats of dates -->
+<script src="date.js"></script>
+<!-- jquery (we might as well use it) -->
+<script src="jquery-1.10.1.min.js"></script>
+<!-- our javascripts -->
+<script src="flclive.js"></script>
+</head>
+<body class="featuredseries">
+<header>
+	<h1><a href="index.html"><abbr title="Faith Life Church">FLC</abbr> Live</a></h1>
+</header>
+<div class="boxeswrapper">
+	<div class="featuredserieswrapper">
+		<div class="featuredseriestitlewrapper box">
+			<div id="featuredseriestitle"></div>
+		</div>
+		<div id="sermons"></div>
+	</div>
+</div>
+<!-- background image has to be done this way because of an iOS issue with background:fixed -->
+<div class="pointlessdivforbackgroundimage"></div>
+<!-- back button -->
+<div class="back" onclick="window.history.back();">&lt;</div>
+<!-- page specific javascripts -->
+<script>
+// show the featured series title
+document.getElementById('featuredseriestitle').innerHTML = '<h2>' + featuredseries + '</h2>';
+// show the featured series sermons
+loadXML('http://www.flcbranson.org/rss/' + featuredseries_camelcase + '.xml');
+</script>
+</body>
+</html>

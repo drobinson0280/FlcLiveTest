@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- makes mobile browsers not zoom by default, not good unless media queries are used for phones -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLC Live</title>
+<link rel="stylesheet" href="flclive.css">
+<!-- required for the redirectToSystemBrowser() function -->
+<script src="phonegap.js"></script>
+<!-- used to change the formats of dates -->
+<script src="date.js"></script>
+<!-- jquery (we might as well use it) -->
+<script src="jquery-1.10.1.min.js"></script>
+<!-- our javascripts -->
+<script src="flclive.js"></script>
+</head>
+<body class="home">
+<header>
+	<h1><a href="index.html"><abbr title="Faith Life Church">FLC</abbr> Live</a></h1>
+</header>
+<div class="boxeswrapper">
+	<section id="livebroadcasts" class="box">
+		<h2>Live Broadcasts</h2>
+		<p class="subheading">Join our next live service in</p>
+		<div id="nextinternetbroadcast" class="link"></div>
+		<ul>
+			<li class="link"><a href="javascript:openServiceTimes();">Broadcast Times</a></li>
+		</ul>
+	</section>
+	<section id="rebroadcasts" class="box">
+		<h2>Rebroadcasts</h2>
+		<p class="subheading">Our most recent full services</p>
+		<ul>
+			<li class="link"><a href="javascript:sundayRebroadcast();">Sunday</a></li>
+			<li class="link"><a href="javascript:fridayRebroadcast();">Friday</a></li>
+		</ul>
+	</section>
+	<section id="featuredseries" class="box">
+		<h2>Featured Series</h2>
+		<p id="featuredseriesspeaker" class="subheading"></p>
+		<div id="featuredseriestitle" class="link"></div>
+	</section>
+	<section id="externallinks" class="box">
+		<h2>Links</h2>
+		<p class="subheading">(Will open in Safari)</p>
+		<ul>
+			<li class="link"><a href="javascript:redirectToSystemBrowser('http://www.flcbranson.org/');"><abbr title="Faith Life Church">FLC</abbr> Website</a></li>
+			<li class="link"><a href="javascript:redirectToSystemBrowser('https://faithlifechurchbranson.thankyou4caring.org/');">Sowing Online</a></li>
+		</ul>
+	</section>
+</div>
+<!-- background image has to be done this way because of an iOS issue with background:fixed -->
+<div class="pointlessdivforbackgroundimage"></div>
+<!-- back button -->
+<div class="back" onclick="window.history.back();">&lt;</div>
+<!-- page specific javascripts -->
+<script>
+// set a global javascript variable
+var livepublishingpoint, nextlivebroadcast;
+// tell the function where the JSON data is
+fetchJSONFile('http://www.flcbranson.org/api/livebroadcast', function(data){
+	// do something with your data
+	// alert(JSON.stringify(data));
+	// alert(data.datetime + ', ' + data.status);
+	nextlivebroadcast = data.nextbroadcast;
+	if (data.status == 'flcb' || data.status == 'flcs') {
+		// define the global variable (only works when using synchronous connections)
+		livepublishingpoint = data.publishingpoint_hls;
+		//window.location = 'http://www.flcbranson.org/liveapp';
+		openVideo(livepublishingpoint);
+	}
+});
+// see if the global variable is still set (would say "undefined" if using an asychronous connection)
+//alert(livepublishingpoint);
+
+// live broadcast countdown
+cdtd(nextlivebroadcast);
+
+// show the featured series info
+document.getElementById('featuredseriestitle').innerHTML = '<a href="featuredseries.html">' + featuredseries + '</a>';
+document.getElementById('featuredseriesspeaker').innerHTML = 'By ' + featuredseries_speaker;
+</script>
+</body>
+</html>

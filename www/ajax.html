@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ajax Test</title>
+<!-- jquery (we might as well use it) -->
+<script src="jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<script>
+/* full-featured ajax call
+$.ajax({
+	// the URL for the request
+	url: 'http://www.flcbranson.org/api/featuredseries',
+	// the type of data we expect back
+	dataType: 'jsonp',
+	// code to run if the request succeeds;
+	// the response is passed to the function
+	success: function(data) {
+		alert(JSON.stringify(data));
+		setFeaturedSeries(data.title);
+		setFeaturedSeriesCamelCase(data.camelcase)
+	},
+});
+*/
+
+// simple get call
+$.get('http://www.flcbranson.org/api/featuredseries', function(data) {
+	alert(JSON.stringify(data));
+}, 'jsonp');
+
+/* simple getjson call
+$.getJSON('http://www.flcbranson.org/api/featuredseries/?callback=?', function(data) {
+	alert(JSON.stringify(data));
+});
+*/
+</script>
+</body>
+</html>
