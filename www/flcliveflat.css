@@ -82,7 +82,7 @@ h1 { background-image:url(images/Logo-Flc-Transparent-64x45.png); }
 .lightboxcontent.servicetimes .timezone { display:block; font-size:0.85em; }
 .lightboxcontent.servicetimes .timezone:before { content:"("; }
 .lightboxcontent.servicetimes .timezone:after { content:")"; }
-.pointlessdivforbackgroundimage { background-image:url(images/flcs-bromoorestagefrontmm13-320x568.jpg); }
+.pointlessdivforbackgroundimage { background-image:url(images/flcs-bromoorestagefrontmm13-640x1136.jpg); background-size:320px 568px; }
 .featuredseries .pointlessdivforbackgroundimage { background-image:url(http://www.flcbranson.org/liveapp/featuredseries-320x568.jpg); }
 }
 @media screen and (max-height:640px) and (orientation:landscape) {
