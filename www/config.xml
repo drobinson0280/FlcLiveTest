@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "org.flcbranson.flclive" version = "1.0">
-	<name>FLC Live Test</name>
+	<name>FLC Live Test - Flat 2</name>
 	<description>Faith Life Church live service app for iOS.  Created with PhoneGap / GitHub.</description>
 	<author href="http://www.flcbranson.org" email="jjackson@moorelife.org">Joshua Jackson</author>
 	<!-- Enable individual API permissions by defining each here.  The 'device' permission is required for the 'deviceready' event. -->
