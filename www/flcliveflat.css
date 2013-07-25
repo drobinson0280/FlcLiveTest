@@ -87,7 +87,7 @@ h1 { background-image:url(images/Logo-Flc-Transparent-128x90.png); background-si
 }
 @media screen and (max-height:640px) and (orientation:landscape) {
 /* h1 and .back share font-size and padding */
-h1 { font-size:1.75em; background-image:url(images/Logo-Flc-Transparent-57x40.png); }
+h1 { font-size:1.75em; background-image:url(images/Logo-Flc-Transparent-114x80.png); background-size:57px 40px; }
 .back { font-size:1.75em; }
 .home .boxeswrapper { margin-left:6em; }
 .box a,
