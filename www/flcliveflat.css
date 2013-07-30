@@ -60,7 +60,7 @@ small { font-size:1em; color:#bfbfbf; }
 .lightboxcontent.servicetimes p { padding:1em; padding-right:0; padding-left:0; border-top:1px solid #909090; }
 .lightboxcontent.servicetimes dt { display:none; }
 .lightboxcontent.servicetimes dd { margin-bottom:1em; }
-.pointlessdivforbackgroundimage { position:fixed; top:-50px; right:0; bottom:0; left:0; z-index:-1; background-repeat:no-repeat; background-attachment:fixed; }
+.pointlessdivforbackgroundimage { position:fixed; top:-48px; right:0; bottom:0; left:0; z-index:-1; background-repeat:no-repeat; background-attachment:fixed; }
 
 @media screen and (orientation:portrait) {
 .boxeswrapper { margin-top:5em; }
